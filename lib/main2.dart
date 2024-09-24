@@ -204,7 +204,7 @@ class WebSocketService {
 
   void connect() {
     // Connect to the WebSocket server
-    channel = IOWebSocketChannel.connect('ws://<server_ip>:5000/socket.io/websocket');
+    channel = IOWebSocketChannel.connect(Uri.parse('ws://127.0.0.1:5000/socket.io/websocket'));
 
     channel.stream.listen((message) {
       // Handle incoming messages from the server
